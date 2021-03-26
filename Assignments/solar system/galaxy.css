@@ -1,0 +1,170 @@
+body {
+    background-size: 100% 100%;
+  
+}
+.solarsystem {
+    position: relative;
+    height: 640px;
+    list-style: none;
+    transition:  0.09s;
+}
+.solarsystem li {
+
+    position: absolute;
+    border: 2px solid #ddd;
+}
+.solarsystem li.active {
+    border-color: #aa4200;
+}
+.solarsystem li.active.sun,
+{
+
+    transform: scale(1.3);
+}
+.solarsystem li.sun {
+    position: absolute;
+    left: 446px;
+    top: 284px;
+    border:none;
+
+
+}
+.solarsystem li.mercury {
+    width: 120px;
+    height: 120px;
+    border-radius:100%;
+    top: 270px;
+    left: 430px;
+}
+.planet1{
+    position: absolute;
+    top: -2px;
+    left: 20px;
+
+}
+.solarsystem li.venus {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    top: 240px;
+    left: 400px;
+}
+.planet2{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+.solarsystem li.earth {
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
+    top: 210px;
+    left: 370px;
+}
+.planet3{
+    position: absolute;
+    top: 25px;
+    left: 20px;
+}
+.solarsystem li.mars {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    top: 180px;
+    left: 340px;
+}
+.planet4{
+    position: absolute;
+    top: 44px;
+    left: 20px;
+}
+.solarsystem li.jupiter {
+    width: 360px;
+    height: 360px;
+    border-radius: 100%;
+    top: 150px;
+    left: 310px;
+}
+.planet5{
+    position: absolute;
+    top: 71px;
+    left: 20px;
+}
+.solarsystem li.saturn {
+    width: 420px;
+    height: 420px;
+    border-radius: 100%;
+    top: 120px;
+    left: 280px;
+}
+.planet6{
+    position: absolute;
+    top: 79px;
+    left: 20px;
+}
+.solarsystem li.uranus {
+    width: 480px;
+    height: 480px;
+    top: 90px;
+    left: 250px;
+    border-radius: 100%;
+}
+.planet7{
+    position: absolute;
+    top: 102px;
+    left: 20px;
+}
+.solarsystem li.neptune {
+    width: 540px;
+    height: 540px;
+    top: 60px;
+    left: 220px;
+    border-radius: 100%;
+}
+.planet8{
+    position: absolute;
+    top: 122px;
+    left: 20px;
+}
+
+@keyframes circle { 
+    from { transform:rotate(0deg) }
+     to { transform:rotate(360deg) } 
+ }
+ ul.solarsystem li {
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+    animation-name:circle;
+}
+
+.solarsystem li.mercury {
+    animation-duration:8s;
+}
+.solarsystem li.venus {
+   animation-duration:12s;
+   animation-delay: 0.5s;
+}
+.solarsystem li.earth {
+   animation-duration:20s;
+   animation-delay: 1s;
+}
+.solarsystem li.mars {
+    animation-duration:30s;
+    animation-delay: 1.5s;
+}
+.solarsystem li.jupiter {
+    animation-duration:40s;
+    animation-delay: 2s;
+}
+.solarsystem li.saturn {
+  animation-duration:50s;
+  animation-delay: 2.5s;
+}
+.solarsystem li.uranus {
+    animation-duration:70s;
+    animation-delay: 3s;
+}
+.solarsystem li.neptune {
+    animation-duration:120s;
+    animation-delay: 3.5s;
+}

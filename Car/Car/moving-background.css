@@ -1,0 +1,232 @@
+   html {
+        box-sizing: border-box;
+    }
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+body {
+    overflow: hidden;
+    height: 100vh;
+    background: linear-gradient(180deg, #09283d, #1b415c);
+    background-size: 2400% 2400%;
+    animation: dayNight  30s linear infinite;
+    }
+
+@keyframes dayNight {
+    0%{background-position:25% 0%}
+
+}
+@keyframes driving {
+    0% {
+        left: -25%;
+        }
+    0% {
+        bottom: 0%;
+        }
+    20% {
+        transform: scale(0.5) rotateZ(0deg);
+        bottom: 5%
+        }
+    100% {
+        left: 110%;
+        bottom: 10%;
+        transform: scale(0.5) rotateZ(0deg);
+        }
+    }
+    @keyframes road-moving {
+        100% {
+            transform: translate(-2400px);
+        }
+    }
+    @keyframes wheelsRotation {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+
+    
+    .car-container {
+        position: absolute;
+        bottom: -10%;
+        width: 430px;
+        height: 300px;
+        animation: driving 10s infinite linear;
+        transform: scale(0.5);
+    }
+    
+    .wheel1,
+    .wheel2 {
+        width: 120px;
+        height: 120px;
+        background-color: grey;
+        border-radius: 50%;
+        border: 20px solid black;
+        position: absolute;
+        bottom: 0;
+        animation: wheelsRotation 1s infinite linear;
+    }
+    .wheel1 {
+        left: 5%;
+    }
+    
+    
+    .wheel2 {
+        right: 5%;
+    }
+    .wheel-dot1,
+    .wheel-dot2 {
+        width: 10px;
+        height: 25px;
+        background-color: black;
+        position: absolute;
+    }
+    .wheel-dot3,
+    .wheel-dot4 {
+        width: 25px;
+        height: 10px;
+        background-color: black;
+        position: absolute;
+    }
+    .wheel-dot1 {
+        top: 10%;
+        left: 45%;
+    }
+    .wheel-dot2 {
+        bottom: 10%;
+        left: 45%;
+    }
+    .wheel-dot3 {
+        top: 45%;
+        right: 10%;
+    }
+    .wheel-dot4 {
+        top: 45%;
+        left: 10%;
+    }
+    .door {
+        width: 110px;
+        height: 100px;
+        border: 3px solid #B57A84;
+        position: absolute;
+        left: 36%;
+        top: 16px;
+        border-radius: 10% 40% 10% 10%;
+    }
+    .door-knob {
+        width: 30px;
+        height: 14px;
+        background-color: #E8E6E6;
+        border-radius: 30%;
+        position: absolute;
+        left: 20%;
+        top: 5%;
+        border: 1px solid lightcoral;
+    }
+    .car-top1 {
+        border-radius: 25% 40% 0 0;
+        background-color: #6A1621;
+        max-width: 100%;
+        width: 250px;
+        height: 130px;
+        position: absolute;
+        top: 0;
+        left: 4%;
+    }
+    .window1,
+    .window2 {
+        background-color: #E2F0F6;
+        border-radius: 5px;
+        position: absolute;
+        width: 40%;
+        height: 60%;
+        margin: 17px;
+        border: 9px solid #BF6D7B;
+    }
+    .window1 {
+        left: 0;
+        border-top-left-radius: 30%;
+    }
+    .window2 {
+        right: 0;
+        border-top-right-radius: 50%;
+    }
+    .car-top2 {
+        border-radius: 100px 200px 0 0;
+        background-color: #25659C;
+        border: 10px solid #72252F;
+        background-color: #9C2535;
+        max-width: 100%;
+        width: 430px;
+        height: 140px;
+        position: absolute;
+        bottom: 20%;
+    }
+    .road {
+        width: 250%;
+        height: 200px;
+        background-color: #585858;
+        border-top: 10px solid #756D6D;
+        border-bottom: 20px solid #756D6D;
+        position: absolute;
+        bottom: 0%;
+        margin-left: -10px;
+        padding: 0;
+    }
+    .road::before {
+        content: " ";
+        position: absolute;
+        z-index: 0;
+        top: -17px;
+        left: 0px;
+        right: 0px;
+        border: 5px solid black;
+    }
+    .road-top-half {
+        height: 15px;
+        width: 250%;
+        position: absolute;
+        left: -10%;
+        top: 30px;
+        border-top: 40px dashed white;
+        margin-top: 25px;
+        animation: road-moving 10s infinite linear;
+        transition: all 3s linear;
+    }
+    .skyline {
+        width: 100%;
+        position: absolute;
+        bottom: 205px;
+        padding: 0;
+        left: 110%;
+        animation: road-moving 10s infinite linear;
+        transition: all 8s linear;
+    }
+    .building1 {
+        width: 220px;
+        height: 450px;
+        background-color: #211919;
+        position: relative;
+    }
+    
+    .building-left-half,
+    .building-right-half {
+        height: 300px;
+        width: 50px;
+        position: absolute;
+        top: 10px;
+        border-left: 16px dashed #fff;
+        border-right: 16px dashed #25659C;
+        margin-top: 25px;
+    }
+    .building-left-half {
+        left: 10px;
+        padding: 25px;
+    }
+    .building-right-half {
+        right: 10px;
+        padding: 20px;
+    }
+    
